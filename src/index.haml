@@ -1,0 +1,51 @@
+!!!
+%html{lang: "ja"}
+    %head
+        %meta{charset: "utf-8"}
+        %title sampleGulp5
+        %link{ :rel => "stylesheet", :type => "text/css", :href =>"../dist/css/application.css" }
+        %script{src: "https://code.jquery.com/jquery-3.2.1.min.js" }
+        %meta{name: "viewport", content: "width=device-width, initial-scale: 1.0,  user-scalable=no" }
+        %script{src: "../dist/js/application.js" }
+        %link{ rel: "stylesheet", href: "../dist/css/bigvideo.css" }
+        %script{ src: "../dist/js/video.js" }
+        %script{ src: "../dist/js/bigvideo.js" }
+        %script{ src: "../dist/js/modernizr-2.5.3.min.js" }
+        %script{ src: "./js/sample.js" }
+
+
+%body
+    %header#headerContainer
+        %div.inner
+            %h1#siteID
+                Kikuchi
+                %span.small welcome!! to new Kikuchi Site!!
+        %nav#navigation
+            %ul
+                %li<
+                    %a{href: "#" } STAFF
+                %li<
+                    %a{href: "#" } SCHEDULE
+                %li<
+                    %a{href: "#" } RECRUIT
+                %li<
+                    %a{href: "#" } GALLERY
+
+
+    %footer#footerContainer
+        %div.inner
+            %p#copyright Copyright© Kikuchi All Rights Reserved.
+
+
+:javascript
+    $(function() {
+        var BV = new $.BigVideo();
+        BV.init();
+
+        if (Modernizr.touch) {
+            BV.show('../image/gagaga.jpg');//タッチデバイスでの画像を指定
+        } else {
+            BV.show('../『夜は短し歩けよ乙女』 90秒予告.mp4',{ambient:true});
+        }
+    });
+

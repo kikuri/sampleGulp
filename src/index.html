@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+<meta charset='utf-8'>
+<title>sampleGulp5</title>
+<link href='../dist/css/application.css' rel='stylesheet' type='text/css'>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<meta content='width=device-width, initial-scale: 1.0,  user-scalable=no' name='viewport'>
+<script src='../dist/js/application.js'></script>
+<link href='../dist/css/bigvideo.css' rel='stylesheet'>
+<script src='../dist/js/video.js'></script>
+<script src='../dist/js/bigvideo.js'></script>
+<script src='../dist/js/modernizr-2.5.3.min.js'></script>
+<script src='./js/sample.js'></script>
+</head>
+</html>
+<body>
+<header id='headerContainer'>
+<div class='inner'>
+<h1 id='siteID'>
+Kikuchi
+<span class='small'>welcome!! to new Kikuchi Site!!</span>
+</h1>
+</div>
+<nav id='navigation'>
+<ul>
+<li><a href='#'>STAFF</a></li>
+<li><a href='#'>SCHEDULE</a></li>
+<li><a href='#'>RECRUIT</a></li>
+<li><a href='#'>GALLERY</a></li>
+</ul>
+</nav>
+</header>
+<footer id='footerContainer'>
+<div class='inner'>
+<p id='copyright'>Copyright© Kikuchi All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+<script>
+  $(function() {
+      var BV = new $.BigVideo();
+      BV.init();
+  
+      if (Modernizr.touch) {
+          BV.show('../image/gagaga.jpg');//タッチデバイスでの画像を指定
+      } else {
+          BV.show('../『夜は短し歩けよ乙女』 90秒予告.mp4',{ambient:true});
+      }
+  });
+</script>
