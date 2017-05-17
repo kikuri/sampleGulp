@@ -22,7 +22,7 @@ gulp.task 'compile-coffee', () ->
     gulp.src 'src/coffee/**/*.coffee'
         .pipe coffee()
         .pipe gulp.dest('./src/js/')
-        .pipe browser.reload({stream:true})
+#        .pipe browser.reload({stream:true})
 
 
 gulp.task 'compile-js', () ->
@@ -31,7 +31,7 @@ gulp.task 'compile-js', () ->
         .pipe concat(compileFileName)
         .pipe uglify()
         .pipe gulp.dest('dist/js')
-        .pipe browser.reload({stream:true})
+#        .pipe browser.reload({stream:true})
 
 
 # hamlタスク設定
@@ -39,7 +39,7 @@ gulp.task 'haml', () ->
     gulp.src './src/*.haml'
         .pipe haml()
         .pipe gulp.dest('./src/')
-        .pipe browser.reload({stream:true})
+#        .pipe browser.reload({stream:true})
 
 
 # SassとCssの保存先を指定
@@ -48,7 +48,7 @@ gulp.task 'sass', () ->
         .pipe sass({outputStyle: 'expanded'})
         .pipe autoprefixer()
         .pipe gulp.dest('./dist/css/')
-        .pipe browser.reload({stream:true})
+#        .pipe browser.reload({stream:true})
 
 
 gulp.task 'compile-css', () ->
@@ -58,7 +58,7 @@ gulp.task 'compile-css', () ->
         .pipe concat(compileFileName)
         .pipe minifyCss()
         .pipe gulp.dest('dist/css')
-        .pipe browser.reload({stream:true})
+#        .pipe browser.reload({stream:true})
 
 gulp.task 'compile', -> runSequence(
   'haml',

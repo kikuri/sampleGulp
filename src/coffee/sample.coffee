@@ -5,9 +5,16 @@ $ ->
   $('a').on 'mouseout', ->
     $('a').css('color', 'white')
 $ ->
-  $('#siteID').on 'mouseover', ->
-    $('#siteID').css('color', 'red')
+  $('.small').on 'mouseover', ->
+    $('.small').css('font-family', 'monospace')
 $ ->
-  $('#siteID').on 'mouseout', ->
-    $('#siteID').css('color', 'white')
+  $('.small').on 'mouseout', ->
+    $('.small').css('font-family', 'cursive')
 
+$ ->
+  if $ '#siteID' .length
+    $('#siteID').on 'mouseover', ->
+    $('#siteID').css('font-family', 'monospace')
+  else
+    $('#siteID').on 'mouseout', ->
+    $('#siteID').css('font-family', 'serif')

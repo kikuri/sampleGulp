@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 14px;
-  background: url(bg-image.jpg) repeat left top;
+  background: url(../../hitori.jpg) repeat left top;
   /* IE6～8用の背景画像 */
 }
 
